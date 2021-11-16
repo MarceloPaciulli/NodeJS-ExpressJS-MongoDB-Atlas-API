@@ -13,6 +13,8 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     }
+}, {
+    versionKey: false // You should be aware of the outcome after set to false
 });
 
 module.exports = mongoose.model('Users', userSchema); //collection named 'users' in MongoDB Atlas
